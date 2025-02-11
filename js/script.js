@@ -1,45 +1,36 @@
 //Iniciamos el script al hacer click en el botón de iniciar presupuesto
-document.getElementById("botonInicio").addEventListener("click", function(){
+document.getElementById("formularioPresupuesto").addEventListener("submit", function(e){
+    e.preventDefault();
     
-    let nombreCliente = prompt("¿Cuál es su nombre completo?");
-        if(!nombreCliente){
-            alert("Por favor ingresa tú nombre");
-            return;
-    }
-
 //Definimos el valor en UF de cada servicio geográfico global
     const servicio = {
-        "Gestión territorial": 25,
-        "Cartografía y SIG": 18,
-        "Evaluación ambiental": 20,
-        "Webmapping": 25
+        "gestion territorial": 25,
+        "cartografia y sig": 18,
+        "evaluacion ambiental": 20,
+        "webmapping": 25
     };
 
 //Aplicamos un factor de ajuste según la distancia de la ejecución del servicio.    
 
     const region = {
-        "Región Metropolitana": 1,
-        "Región de Valparaíso": 1.2,
-        "Región del Libertador Bernardo O'higgins": 1.2,
-        "Región de La Araucanía": 1.1,
-        "Región del Biobío": 1.2,
-        "Región de Los Ríos": 1.3,
-        "Región de Los Lagos": 1.3
+        "region metropolitana": 1,
+        "region de valparaiso": 1.2,
+        "region del libertador bernardo o'higgins": 1.2,
+        "region de La araucania": 1.1,
+        "region del biobio": 1.2,
+        "region de los rios": 1.3,
+        "region de los lagos": 1.3
     }
 
-//Cliente escoge servicio y región e invalida si se equivoca
+//Obtener valores del formulario y obviar el espacio al ingresar nombre    
+    const nombreCliente = document.getElementById("nombre").value.trim();
+    const servicioSeleccion = document.getElementById("servicio").value;
+    const regionSeleccion = document.getElementById("region").value;
 
-    let servicioSeleccion = prompt("¿Qué servicio quiere cotizar? Gestión territorial, Cartografía y SIG, Evaluación ambiental, Webmapping.");
-        if(!servicio[servicioSeleccion]){
-            alert("Servicio inválido, intente de nuevo");
-            return;
-        }
-
-    let regionSeleccion = prompt("¿ En qué región? Región Metropolitana, Región de Valparaíso, Región del Libertador Bernardo O'higgins, Región de La Araucanía, Región del Biobío, Región de Los Ríos, Región de Los Lagos");
-        if(!region[regionSeleccion]){
-            alert("Región inválida, intente de nuevo");
-            return;
-        }
+    if (!nombreCliente) {
+        alert("Por favor, ingresa tu nombre.");
+        return;
+    }
 
 //Costo total se define por valor base + IVA 
 
@@ -51,6 +42,11 @@ document.getElementById("botonInicio").addEventListener("click", function(){
         let iva = costoBase * 0.19;
         return costoBase + iva;
     };
+
+    localStorage.setItem("nombreCliente", nombreCliente);
+    localStorage.setItem("servicioSeleccionado", servicioSeleccion);
+    localStorage.setItem("regionSeleccionada", regionSeleccion);
+    localStorage.setItem("costoTotal", costoTotal);
 
 //Se crea párrafo con el resultado
 document.getElementById("resultado").textContent =

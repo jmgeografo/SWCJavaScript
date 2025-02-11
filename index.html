@@ -10,10 +10,33 @@
     <section class="instrucciones">
         <h1>Surweste Consultores - Soluciones geográficas a tu medida</h1>
         <p>Este simulador permite realizar cotizaciones básicas de los servicios geográficos que ofrecemos en Surweste Consultores. 
-        <p>Utiliza la Consola JS para interactuar con el programa, accediendo con el comando F12 o CTRL+SHIFT+J. <p>Puedes calcular los costos estimados según los servicios seleccionados y el lugar requerido.</p>
+        <p>Puedes calcular los costos estimados, señalándonos los servicios seleccionados y la región en nuestro formulario.</p>
     </section>
 
-    <button id="botonInicio">Haz click aquí para iniciar tu presupuesto</button>
+    <form id="formularioPresupuesto">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="servicio">Servicio:</label>
+        <select id="servicio" required>
+            <option value="gestion territorial">Gestión territorial</option>
+            <option value="cartografia y sig">Cartografía y SIG</option>
+            <option value="evaluacion ambiental">Evaluación Ambiental</option>
+            <option value="webmapping">Webmapping</option>
+        </select><br>
+
+        <label for="region">Región:</label>
+        <select id="region" required>
+            <option value="region metropolitana">Región Metropolitana de Santiago</option>
+            <option value="region de valparaíso">Región de Valparaíso</option>
+            <option value="region del libertador bernardo o'higgins">Región del Libertador Bernardo O'higgins</option>
+            <option value="region de la araucania">Región de La Araucanía</option>
+            <option value="region del biobio">Región del Biobío</option>
+            <option value="region de los rios">Región de Los Ríos</option>
+            <option value="region de los lagos">Región de Los Lagos</option>
+        </select><br>
+
+    <button type="submit" class="botonInicio">Haz click aquí para calcular tu presupuesto</button>
 
     <h2 id="resultado"></h2>
 

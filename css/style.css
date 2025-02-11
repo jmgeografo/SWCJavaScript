@@ -19,6 +19,12 @@ body {
     width: 90%;
 }
 
+#formularioPresupuesto {
+    text-align: justify;
+    background-color: orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* Título */
 h1 {
     font-size: 1.5em;
@@ -27,7 +33,7 @@ h1 {
 }
 
 /* Botón */
-#botonInicio {
+.botonInicio {
     background-color: #0056b3;
     color: #fff;
     border: none;
@@ -38,7 +44,7 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-#botonInicio:hover {
+.botonInicio:hover {
     background-color: orange;
 }
 
@@ -46,8 +52,8 @@ h1 {
 #resultado {
     margin-top: 20px;
     font-size: 1.2em;
-    color: red;
-    background: black;
+    color: white;
+    background: blue;
     padding: 10px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
