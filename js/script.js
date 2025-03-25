@@ -1,4 +1,3 @@
-//Iniciamos el script al hacer click en el botón de iniciar presupuesto
 document.getElementById("formularioPresupuesto").addEventListener("submit", function(e){
     e.preventDefault();
     
@@ -16,7 +15,7 @@ document.getElementById("formularioPresupuesto").addEventListener("submit", func
         "region metropolitana": 1,
         "region de valparaiso": 1.2,
         "region del libertador bernardo o'higgins": 1.2,
-        "region de La araucania": 1.1,
+        "region de la araucania": 1.1,
         "region del biobio": 1.2,
         "region de los rios": 1.3,
         "region de los lagos": 1.3
