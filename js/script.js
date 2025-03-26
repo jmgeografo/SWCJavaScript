@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const cotizaciones = [];
 
 function cargarServiciosYRegiones() {
-    fetch("../services.json")
+    fetch("services.json")
         .then(response => response.json())
         .then(data => {
             const selectServicio = document.getElementById("servicio");
@@ -43,7 +43,7 @@ document.getElementById("formularioPresupuesto").addEventListener("submit", func
     }
 
     // Calcular el costo total cuando se seleccionan servicio y región ya que tiene asociado un valor en UF y un factor de ajuste según distancia geográfica
-    fetch("../services.json")
+    fetch("services.json")
         .then(response => response.json())
         .then(data => {
             // Buscar servicio y región seleccionados en los datos cargados json
@@ -134,7 +134,7 @@ function editarCotizacion(index) {
         cotizacion.region = document.getElementById("region").value;
         
         // Actualizar el costo basado en el servicio y la región
-        fetch("../services.json")
+        fetch("services.json")
             .then(response => response.json())
             .then(data => {
                 const servicio = data.servicios.find(s => s.nombre === cotizacion.servicio);
