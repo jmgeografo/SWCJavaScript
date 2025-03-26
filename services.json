@@ -1,0 +1,17 @@
+{
+    "servicios": [
+        { "nombre": "Gestión territorial", "precio": 25 },
+        { "nombre": "Cartografía y SIG", "precio": 18 },
+        { "nombre": "Evaluación Ambiental", "precio": 20 },
+        { "nombre": "Webmapping", "precio": 25 }
+    ],
+    "regiones": [
+        { "nombre": "Región Metropolitana de Santiago", "factor": 1 },
+        { "nombre": "Región de Valparaíso", "factor": 1.2 },
+        { "nombre": "Región del Libertador Bernardo O'Higgins", "factor": 1.2 },
+        { "nombre": "Región de La Araucanía", "factor": 1.1 },
+        { "nombre": "Región del Biobío", "factor": 1.2 },
+        { "nombre": "Región de Los Ríos", "factor": 1.3 },
+        { "nombre": "Región de Los Lagos", "factor": 1.3}
+    ]
+}

@@ -9,8 +9,8 @@
 <body>
     <section class="instrucciones">
         <h1>Surweste Consultores - Soluciones geográficas a tu medida</h1>
-        <p>Este simulador permite realizar cotizaciones básicas de los servicios geográficos que ofrecemos en Surweste Consultores. 
-        <p>Puedes calcular los costos estimados, señalándonos los servicios seleccionados y la región en nuestro formulario.</p>
+        <p>Este simulador permite realizar cotizaciones básicas de los servicios geográficos que ofrecemos en Surweste Consultores. </p>
+        <p>Puedes calcular los costos estimados, seleccionando los servicios y la región en nuestro formulario.</p>
     </section>
 
     <form id="formularioPresupuesto">
@@ -19,26 +19,22 @@
 
         <label for="servicio">Servicio:</label>
         <select id="servicio" required>
-            <option value="gestion territorial">Gestión territorial</option>
-            <option value="cartografia y sig">Cartografía y SIG</option>
-            <option value="evaluacion ambiental">Evaluación Ambiental</option>
-            <option value="webmapping">Webmapping</option>
         </select><br>
 
         <label for="region">Región:</label>
         <select id="region" required>
-            <option value="region metropolitana">Región Metropolitana de Santiago</option>
-            <option value="region de valparaiso">Región de Valparaíso</option>
-            <option value="region del libertador bernardo o'higgins">Región del Libertador Bernardo O'higgins</option>
-            <option value="region de la araucania">Región de La Araucanía</option>
-            <option value="region del biobio">Región del Biobío</option>
-            <option value="region de los rios">Región de Los Ríos</option>
-            <option value="region de los lagos">Región de Los Lagos</option>
         </select><br>
 
-    <button class="botonInicio" type="submit">Haz click aquí para calcular tu presupuesto</button>
+        <button class="botonInicio" type="submit">Haz click aquí para calcular tu presupuesto</button>
+    </form>
 
     <h2 id="resultado"></h2>
+
+    <section id="cotizaciones-lista">
+        <h3>Historial de Cotizaciones</h3>
+        <p>Puedes editar o borrar el listado de cotizaciones </p>
+        <ul id="listaCotizaciones"></ul>
+    </section>
 
     <script src="js/script.js"></script>
 </body>

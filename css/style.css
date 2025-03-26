@@ -23,16 +23,24 @@ body {
     text-align: justify;
     background-color: orange;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-/* Título */
+
 h1 {
     font-size: 1.5em;
     color: #0056b3;
     margin-bottom: 20px;
 }
 
-/* Botón */
+h3 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+
 .botonInicio {
     background-color: #0056b3;
     color: #fff;
@@ -48,7 +56,7 @@ h1 {
     background-color: orange;
 }
 
-/* Resultado */
+
 #resultado {
     margin-top: 20px;
     font-size: 1.2em;
@@ -57,4 +65,31 @@ h1 {
     padding: 10px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#cotizaciones-lista {
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#listaCotizaciones li {
+    list-style: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#listaCotizaciones button {
+    background-color: #0056b3;
+    color: white;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#listaCotizaciones button:hover {
+    background-color: orange;
 }
